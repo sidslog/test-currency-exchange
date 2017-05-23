@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exchange View Controller-->
+        <scene sceneID="WIS-V0-uVn">
+            <objects>
+                <viewController storyboardIdentifier="ExchangeViewController" id="EZF-76-ky7" customClass="ExchangeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1fM-fp-XLG"/>
+                        <viewControllerLayoutGuide type="bottom" id="TTq-ew-DNw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TG2-dm-R6R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc2-jw-07G" customClass="CarouselView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <color key="backgroundColor" red="0.0078431372549019607" green="0.51372549019607838" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4pt-hH-2df">
+                                <rect key="frame" x="168" y="296.5" width="39" height="37"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9j-GY-Iho" customClass="CarouselView">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.40392156862745099" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cYD-tm-KEe">
+                                <rect key="frame" x="168" y="630" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C9j-GY-Iho" firstAttribute="height" secondItem="zc2-jw-07G" secondAttribute="height" id="041-On-KMW"/>
+                            <constraint firstItem="C9j-GY-Iho" firstAttribute="top" secondItem="zc2-jw-07G" secondAttribute="bottom" id="3cm-hG-ZvH"/>
+                            <constraint firstItem="C9j-GY-Iho" firstAttribute="leading" secondItem="TG2-dm-R6R" secondAttribute="leading" id="7LC-Dp-4fZ"/>
+                            <constraint firstItem="cYD-tm-KEe" firstAttribute="centerX" secondItem="C9j-GY-Iho" secondAttribute="centerX" id="ANo-aU-bgu"/>
+                            <constraint firstItem="zc2-jw-07G" firstAttribute="leading" secondItem="TG2-dm-R6R" secondAttribute="leading" id="QLh-yh-dmN"/>
+                            <constraint firstItem="4pt-hH-2df" firstAttribute="bottom" secondItem="zc2-jw-07G" secondAttribute="bottom" id="Qos-Si-mXG"/>
+                            <constraint firstItem="4pt-hH-2df" firstAttribute="centerX" secondItem="zc2-jw-07G" secondAttribute="centerX" id="enp-H5-6Aj"/>
+                            <constraint firstAttribute="trailing" secondItem="zc2-jw-07G" secondAttribute="trailing" id="mmc-M7-aAM"/>
+                            <constraint firstItem="zc2-jw-07G" firstAttribute="top" secondItem="TG2-dm-R6R" secondAttribute="top" id="ntT-My-lFT"/>
+                            <constraint firstItem="cYD-tm-KEe" firstAttribute="bottom" secondItem="C9j-GY-Iho" secondAttribute="bottom" id="pNs-Bh-En2"/>
+                            <constraint firstAttribute="trailing" secondItem="C9j-GY-Iho" secondAttribute="trailing" id="rkm-FR-WQ8"/>
+                            <constraint firstItem="TTq-ew-DNw" firstAttribute="top" secondItem="C9j-GY-Iho" secondAttribute="bottom" id="xF7-Pl-Gu5"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="bottomMargin" destination="xF7-Pl-Gu5" id="IRX-OO-7TN"/>
+                        <outlet property="fromCarousel" destination="zc2-jw-07G" id="QFk-Zg-ASa"/>
+                        <outlet property="fromPageControl" destination="4pt-hH-2df" id="ceD-db-DMX"/>
+                        <outlet property="toCarousel" destination="C9j-GY-Iho" id="5A0-8j-PQ5"/>
+                        <outlet property="toPageControl" destination="cYD-tm-KEe" id="qNs-Ap-CDz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCS-AX-KxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="34"/>
+        </scene>
+    </scenes>
+</document>
